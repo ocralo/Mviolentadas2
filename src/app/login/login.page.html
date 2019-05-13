@@ -1,0 +1,50 @@
+<ion-header>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <div align-items="center" style="margin:0 auto;text-align:center">
+        <img width="50%" height="50%" src="https://fundacionmatrix.es/wp-content/uploads/2018/02/LOGO-PROMUJER-e1517543045871.jpg">
+    </div>
+    
+    <div class="login-divider">
+      <!-- Agrego el input del usuario o email-->
+        <ion-item>
+          <!-- Position floating hace que cuando de click en el input el texto suba automaticamente-->
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+    </div>
+
+    <div class="login-divider">
+  <!-- Agrego el input de la contraseña-->
+        <ion-item>
+          <!-- Position floating hace que cuando de click en el input el texto suba automaticamente-->
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+          </ion-item>
+    </div>
+
+    <!-- Boton de log-in-->
+    <div style="margin-top:1em">
+      <ion-button expand="full" (click)="Login()" >
+        <ion-ripple-effect></ion-ripple-effect>
+        <ion-icon slot="end" name="log-in"></ion-icon>
+        Log-in
+      </ion-button>
+    </div>
+    <div style="margin-top:1em">
+    <!-- Boton de registrarse-->
+        <ion-button expand="full" color="light" (click)="Register()">
+          <ion-ripple-effect></ion-ripple-effect>
+          Register
+        </ion-button>
+         <!-- Boton de google-->
+         <ion-button expand="full" color="light" (click)="LoginGoogle()">
+          <ion-ripple-effect></ion-ripple-effect> 
+              <img src="../../assets/search.svg">
+             <ion-label>Login with GOOGLE</ion-label>
+        </ion-button>
+      </div>  
+    </div>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content center text-center>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p></p>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center aling-items-center>
+        <ion-col (click)="complaints()">
+            <ion-thumbnail>
+                <img src="../../assets/exclamation-mark.svg">
+              </ion-thumbnail>
+              <h3>Denuncias</h3>
+        </ion-col>
+        <ion-col (click)="info()">
+            <ion-thumbnail>
+                <img src="../../assets/books.svg">
+              </ion-thumbnail>
+              <h3>Educación</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <p></p>
+            </ion-col>
+      </ion-row>
+      <ion-row justify-content-center aling-items-center>
+        <ion-col>
+          <ion-thumbnail>
+              <img src="../../assets/teamwork.svg">
+          </ion-thumbnail>
+          <h3>Redes de Apoyo</h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    
+ 
+</ion-content>

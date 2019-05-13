@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Denuncias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="start" text-center>
+    <h1 text-center>Boton de panico</h1>
+    <img src="../../assets/alarm.svg" width="100"/>
+  </ion-fab>
+  <ion-fab vertical="bottom" text-center slot="fixed">
+    <ion-button color="success" (click)="callNumber()" expand="full">
+      <h3>LLAMAR AL 123 </h3>
+      <ion-icon name="call" slot="start">LLAMAR</ion-icon>
+    </ion-button>
+  </ion-fab>
+
+</ion-content>
