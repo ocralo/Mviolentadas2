@@ -1,0 +1,19 @@
+h1,h2,h3,h4.h5,h6{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #009959;
+    font-weight: 600;
+    border-bottom: 1px solid #009959;
+    padding-bottom: 1em; 
+}
+ion-button{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.ion-button-cancel{
+    border-bottom: 1px solid #009959;
+    padding-bottom: 2em; 
+}
+.ion-button-success{
+    --background:#009959;
+}

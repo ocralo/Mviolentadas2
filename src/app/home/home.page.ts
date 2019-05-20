@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController } from '@ionic/angular';
+import { AngularFireAuth } from "angularfire2/auth"; 
 
 
 
@@ -10,7 +11,10 @@ styleUrls: ['home.page.scss'],
 })
 export class HomePage {
 
-    constructor(private nvctrl:NavController, private menuCtrl:MenuController) { }
+    constructor(
+        private nvctrl:NavController, 
+        private menuCtrl:MenuController,
+        private afAuth: AngularFireAuth,) { }
 /** Metodos de navegacion hacia las otras paginas */
 
 info(){
@@ -18,6 +22,8 @@ info(){
 }
 complaints(){
     this.nvctrl.navigateRoot('/denuncias');
+    //this.nvctrl.navigateForward('/denuncias/' + res.user.email.split("@")[0]);
+    
 }
 Networks(){
     this.nvctrl.navigateRoot('/list');

@@ -10,6 +10,7 @@ import { User } from "../modules/user"; //componente de ususario para firebase
 import { AngularFireAuth } from "angularfire2/auth"; //autenticacion con firebasse
 import { auth } from "firebase/app"; //componentes de firebase
 import { GooglePlus } from "@ionic-native/google-plus/ngx"; //componente de google para iniciar seccion con google
+import { UserService } from '../user.service'; 
 
 @Component({
   selector: "app-login",
@@ -26,7 +27,8 @@ export class LoginPage implements OnInit {
     public alertController: AlertController,
     public gplus: GooglePlus,
     public platform: Platform,
-    private menuCtrl: MenuController
+    private menuCtrl: MenuController,
+    private us:UserService
   ) {}
   /** Inicio de seccion con firebase y sus respectivos mensajes de alerta si los datos estan erroneos */
   async Login() {
@@ -46,8 +48,9 @@ export class LoginPage implements OnInit {
         .then(async (res: any) => {
           if (res) {
             // console.log(res.user.email)
-            // this.navCtrl.navigateRoot("/home");
-            this.navCtrl.navigateForward('/denuncias/' + res.user.email.split("@")[0]);
+            var user = res.user.email.split("@")[0];
+            this.us.setName(user);
+            this.navCtrl.navigateRoot("/home");
             const toast = await this.toastController.create({
               message: "Bienvenido",
               duration: 1000
@@ -75,13 +78,8 @@ export class LoginPage implements OnInit {
       console.error(e);
     }
   }
-  async Register() { // ventana para registrarse en la aplicacion
-    const toast = await this.toastController.create({
-      message: "Registrate",
-      duration: 1000
-    });
-    toast.present();
-    //this.navCtrl.push('RegistrerPage');
+  Register() { // ventana para registrarse en la aplicacion
+   this.navCtrl.navigateRoot("/register");
   }
   LoginGoogle() { // ingreso con google
     this.afAuth.auth
@@ -155,6 +153,8 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+
+  
   ionViewWillEnter() {
     this.menuCtrl.enable(false);
   }

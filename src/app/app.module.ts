@@ -19,6 +19,7 @@ import { CallNumber } from "@ionic-native/call-number/ngx";
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { AngularFireDatabase } from '@angular/fire/database';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,6 +40,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
     GooglePlus,
     AngularFireDatabase,
     InAppBrowser,
+    UserService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

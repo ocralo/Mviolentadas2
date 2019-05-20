@@ -38,5 +38,11 @@ export class ListPage implements OnInit { //coloca una lista en una pagina
   NetworkSupportFacebook(){
     this.nvctrl.navigateRoot('/network');
   }
+  NetworkSupportInstagram(){
+    this.nvctrl.navigateRoot('/network-instagram');
+  }
+  NetworkSupportTwitter(){
+    this.nvctrl.navigateRoot('/network-twitter');
+  }
   
 }

@@ -1,0 +1,53 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <div>
+      <h2>Registrate</h2>
+      <hr width="80%">
+    </div>
+    <div class="login-divider">
+      <!-- Agrego el input del usuario o email-->
+      <ion-item>
+        <!-- Position floating hace que cuando de click en el input el texto suba automaticamente-->
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" ></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="login-divider">
+      <!-- Agrego el input de la contraseña-->
+      <ion-item>
+        <!-- Position floating hace que cuando de click en el input el texto suba automaticamente-->
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" ></ion-input>
+      </ion-item>
+    </div>
+    <div class="login-divider">
+        <!-- Agrego el input de la contraseña-->
+        <ion-item>
+          <!-- Position floating hace que cuando de click en el input el texto suba automaticamente-->
+          <ion-label position="floating">Repeat Password</ion-label>
+          <ion-input type="password" ></ion-input>
+        </ion-item>
+      </div>
+
+    <!-- Boton de log-in-->
+    <div style="margin-top:1em">
+      <ion-button expand="full" class="ion-button-success" shape="round" (click)="Login()">
+        <ion-ripple-effect></ion-ripple-effect>
+        REGISTER
+      </ion-button>
+      <ion-button expand="full" color="danger" shape="round" (click)="Cancel()">
+          <ion-ripple-effect></ion-ripple-effect>
+          CANCEL
+        </ion-button>
+    </div>
+
+    <div class="ion-button-cancel">
+
+    </div>
+  </div>
+</ion-content>

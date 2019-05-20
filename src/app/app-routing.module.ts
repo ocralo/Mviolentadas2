@@ -8,15 +8,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home/:id',
+    path: 'home',
     loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'list/:id',
+    path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
   { 
-    path: 'info/:id',
+    path: 'info',
     loadChildren: './info/info.module#InfoPageModule' 
   },
   { 
@@ -24,13 +24,28 @@ const routes: Routes = [
     loadChildren: './login/login.module#LoginPageModule' 
   },
   { 
-    path: 'denuncias/:id', 
+    path: 'denuncias', 
     loadChildren: './denuncias/denuncias.module#DenunciasPageModule' 
   },
   { 
-    path: 'network/:id', 
+    path: 'network', 
     loadChildren: './network/network.module#NetworkPageModule'
    },
+  {
+     path: 'network-instagram',
+      loadChildren: './network-instagram/network-instagram.module#NetworkInstagramPageModule'
+    },
+  { 
+    path: 'network-twitter', 
+    loadChildren: './network-twitter/network-twitter.module#NetworkTwitterPageModule' 
+  },
+  { 
+    path: 'register', 
+    loadChildren: './register/register.module#RegisterPageModule' 
+  },
+
+
+
 
  
 
