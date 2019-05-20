@@ -8,15 +8,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: 'home/:id',
     loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'list',
+    path: 'list/:id',
     loadChildren: './list/list.module#ListPageModule'
   },
   { 
-    path: 'info',
+    path: 'info/:id',
     loadChildren: './info/info.module#InfoPageModule' 
   },
   { 
@@ -24,11 +24,11 @@ const routes: Routes = [
     loadChildren: './login/login.module#LoginPageModule' 
   },
   { 
-    path: 'denuncias', 
+    path: 'denuncias/:id', 
     loadChildren: './denuncias/denuncias.module#DenunciasPageModule' 
   },
   { 
-    path: 'network', 
+    path: 'network/:id', 
     loadChildren: './network/network.module#NetworkPageModule'
    },
 

@@ -45,7 +45,9 @@ export class LoginPage implements OnInit {
         .signInWithEmailAndPassword(this.user.email, this.user.password) //metodo de datos correctos
         .then(async (res: any) => {
           if (res) {
-            this.navCtrl.navigateRoot("/home");
+            // console.log(res.user.email)
+            // this.navCtrl.navigateRoot("/home");
+            this.navCtrl.navigateForward('/denuncias/' + res.user.email.split("@")[0]);
             const toast = await this.toastController.create({
               message: "Bienvenido",
               duration: 1000

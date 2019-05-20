@@ -18,6 +18,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { CallNumber } from "@ionic-native/call-number/ngx";
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
+import { AngularFireDatabase } from '@angular/fire/database';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -35,6 +37,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     AngularFireAuth,
     AlertController,
     GooglePlus,
+    AngularFireDatabase,
     InAppBrowser,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

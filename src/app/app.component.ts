@@ -12,7 +12,7 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
+      url: '/home/:id',
       icon: 'home'
     },
     {
@@ -22,12 +22,12 @@ export class AppComponent {
     },
     {
       title: 'Especialistas',
-      url: '/list',
+      url: '/list/:id',
       icon: 'list'
     },
     {
       title: 'Información',
-      url: '/info',
+      url: '/info/:id',
       icon: 'information'
     },
     {
