@@ -14,5 +14,8 @@ ion-thumbnail {
 
 ion-content{
   font-family: 'Noto Sans JP', sans-serif;
-  
+  --background: #fff url('../../assets/fondo.jpg') no-repeat center center / cover;
+}
+.space{
+  margin: 10% auto;
 }

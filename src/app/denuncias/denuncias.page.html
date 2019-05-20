@@ -10,15 +10,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-fab vertical="start" text-center>
-    <h1 text-center>Boton de panico</h1>
-    <img src="../../assets/alarm.svg" width="100"/>
+    <ion-fab vertical="top" horizontal="start">
+    <img src="../../assets/shield.svg" />
+    <h1 text-center id="button-font">Boton de panico</h1>
   </ion-fab>
-  <ion-fab vertical="bottom" text-center slot="fixed">
-    <ion-button color="success" (click)="callNumber()" expand="full">
-      <h3>LLAMAR AL 123 </h3>
-      <ion-icon name="call" slot="start">LLAMAR</ion-icon>
-    </ion-button>
-  </ion-fab>
-
 </ion-content>
+<ion-footer>
+  <ion-button  (click)="Llamadas()" expand="full" shape="round" class="btn-call">
+    <h3>LLAMAR AL 123 </h3>
+    <ion-icon name="call" slot="start">LLAMAR</ion-icon>
+  </ion-button>
+
+</ion-footer>

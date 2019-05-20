@@ -1,1 +1,16 @@
-
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+.img-social img{
+    max-width: 50px;
+    margin-left: 1em;
+}
+.ion-content-bottom{
+    max-height: 130px;
+    --background: #fff !important;
+}
+ion-col{
+    padding: 0;
+}
+ion-content{
+    font-family: 'Noto Sans JP', sans-serif;
+    --background: #fff url('../../assets/fondo.jpg') no-repeat center center / cover;
+}

@@ -9,3 +9,16 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap');
+
+ion-toolbar{
+    --background: #009959;
+}
+ion-title{
+    color:#fff;
+}
+ion-menu-button{
+    color: #fff;
+}

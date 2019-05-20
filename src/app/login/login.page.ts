@@ -1,14 +1,15 @@
 import { Component, OnInit } from "@angular/core";
 import {
-  ToastController,
+  ToastController, //componente para mostrar mensajes emergentes
   NavController,
   AlertController,
-  Platform
+  Platform, //componente para plataformas android o ios
+  MenuController
 } from "@ionic/angular";
-import { User } from "../modules/user";
-import { AngularFireAuth } from "angularfire2/auth";
-import { auth } from "firebase/app";
-import { GooglePlus } from "@ionic-native/google-plus/ngx";
+import { User } from "../modules/user"; //componente de ususario para firebase
+import { AngularFireAuth } from "angularfire2/auth"; //autenticacion con firebasse
+import { auth } from "firebase/app"; //componentes de firebase
+import { GooglePlus } from "@ionic-native/google-plus/ngx"; //componente de google para iniciar seccion con google
 
 @Component({
   selector: "app-login",
@@ -17,17 +18,19 @@ import { GooglePlus } from "@ionic-native/google-plus/ngx";
 })
 export class LoginPage implements OnInit {
   user = {} as User;
-
+/** Se coloca en el constructor todos los componentes ya que vamos a utilizar sus metodos */
   constructor(
     private afAuth: AngularFireAuth,
     public toastController: ToastController,
     public navCtrl: NavController,
     public alertController: AlertController,
     public gplus: GooglePlus,
-    public platform: Platform
+    public platform: Platform,
+    private menuCtrl: MenuController
   ) {}
+  /** Inicio de seccion con firebase y sus respectivos mensajes de alerta si los datos estan erroneos */
   async Login() {
-    if (this.user.email == null || this.user.password == null) {
+    if (this.user.email == null || this.user.password == null) { //validacion si no ha ingresado ningun dato
       const alert = await this.alertController.create({
         header: "OH-OH",
         subHeader: "Datos incorrectos",
@@ -39,7 +42,7 @@ export class LoginPage implements OnInit {
 
     try {
       this.afAuth.auth
-        .signInWithEmailAndPassword(this.user.email, this.user.password)
+        .signInWithEmailAndPassword(this.user.email, this.user.password) //metodo de datos correctos
         .then(async (res: any) => {
           if (res) {
             this.navCtrl.navigateRoot("/home");
@@ -51,7 +54,7 @@ export class LoginPage implements OnInit {
           }
         })
         .catch(async (error: any) => {
-          const alert = await this.alertController.create({
+          const alert = await this.alertController.create({ //capturar si los datos estan incorrectos y mostrar mensaje de datos erroneos
             header: "OH-OH",
             subHeader: "Datos incorrectos",
             message: "El usuario o la contraseña estan incorrectos",
@@ -70,7 +73,7 @@ export class LoginPage implements OnInit {
       console.error(e);
     }
   }
-  async Register() {
+  async Register() { // ventana para registrarse en la aplicacion
     const toast = await this.toastController.create({
       message: "Registrate",
       duration: 1000
@@ -78,9 +81,9 @@ export class LoginPage implements OnInit {
     toast.present();
     //this.navCtrl.push('RegistrerPage');
   }
-  LoginGoogle() {
+  LoginGoogle() { // ingreso con google
     this.afAuth.auth
-      .signInWithPopup(new auth.GoogleAuthProvider())
+      .signInWithPopup(new auth.GoogleAuthProvider()) //datos correctos
       .then(async (res: any) => {
         if (res) {
           this.navCtrl.navigateRoot("/home");
@@ -92,7 +95,7 @@ export class LoginPage implements OnInit {
         }
       })
       .catch(async (error: any) => {
-        const alert = await this.alertController.create({
+        const alert = await this.alertController.create({ //datos incorrectos
           header: "OH-OH",
           subHeader: "Datos incorrectos",
           message: "El usuario o la contraseña estan incorrectos",
@@ -103,7 +106,7 @@ export class LoginPage implements OnInit {
       });
   }
 
-  async nativeGoogleLogin() {
+  async nativeGoogleLogin() { // configuracion de google autenticar la aplicacion con un id del cliente en google console
     const gplusUser = await this.gplus.login({
       webClientId:
         "436211545918-rfcgvhu3t3574vnu7e3kgiai6hem801p.apps.googleusercontent.com",
@@ -144,9 +147,13 @@ export class LoginPage implements OnInit {
     }
   }
 
-  signOut() {
+  signOut() { //al salir rompe los datos de google
     this.afAuth.auth.signOut();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+  ionViewWillEnter() {
+    this.menuCtrl.enable(false);
+  }
 }

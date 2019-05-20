@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button icon="arrow-back" defaultHref="/list" text=""></ion-back-button>
+        </ion-buttons>
+    <ion-title>Facebook</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-content>
+          <ion-card>
+            <img src="../../assets/casa-matria-face.jpg" alt="">
+              <ion-card-header>
+                <ion-card-subtitle>@casamatriacali</ion-card-subtitle>
+                <ion-card-title>Casa Matria "Casa de las Mujeres"</ion-card-title>
+              </ion-card-header>
+            
+              <ion-card-content>
+                  Es un espacio que se crea para promover los derechos humanos de 
+                  las mujeres para la construcción de un municipio libre de violencias 
+                  basadas en genero.
+              </ion-card-content>
+              <ion-button (click)="CasaMatria()" expand="full">Ir a FanPage</ion-button>
+            </ion-card>
+      
+            <ion-card>
+                <img src="../../assets/mujeres-emprendedoras.jpg" alt="">
+                  <ion-card-header>
+                    <ion-card-subtitle>Grupo Cerrado</ion-card-subtitle>
+                    <ion-card-title>Mujeres Emprendedoras</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                      Somos un grupo de mujeres que apoya el emprendimiento
+                  </ion-card-content>
+                  <ion-button (click)="MujeresEmprendedoras()" expand="full">Ir a FanPage</ion-button>
+                </ion-card>
+      
+                
+            <ion-card>
+                <img src="../../assets/mujeres-empoderadas.png" alt="">
+                  <ion-card-header>
+                    <ion-card-subtitle>@empoderatemujer</ion-card-subtitle>
+                    <ion-card-title>Mujeres Empoderadas</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                      Programa de formación y coaching empoderante para mujeres 
+                      que desean tomar el control de su vida. 
+                  </ion-card-content>
+                  <ion-button (click)="MujeresEmpoderadas()" expand="full">Ir a FanPage</ion-button>
+                </ion-card>
+      
+                <ion-button (click)="Back()" expand="full">Regresar</ion-button>
+            
+      </ion-content>
+      
+      
+</ion-content>

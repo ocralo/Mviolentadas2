@@ -23,7 +23,17 @@ const routes: Routes = [
     path: 'login', 
     loadChildren: './login/login.module#LoginPageModule' 
   },
-  { path: 'denuncias', loadChildren: './denuncias/denuncias.module#DenunciasPageModule' }
+  { 
+    path: 'denuncias', 
+    loadChildren: './denuncias/denuncias.module#DenunciasPageModule' 
+  },
+  { 
+    path: 'network', 
+    loadChildren: './network/network.module#NetworkPageModule'
+   },
+
+ 
+
 ];
 
 @NgModule({

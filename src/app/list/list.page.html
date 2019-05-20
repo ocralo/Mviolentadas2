@@ -10,41 +10,61 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-avatar slot="start"> <img src="../../assets/teacher.svg" />
-      </ion-avatar>
-      <ion-label>
-        <h3>Yuli Alcalina</h3>
-        <p>Psicologa</p>
-        <p><b>Necesitas ayuda</b></p>
-      </ion-label>
-      <p>+123456789</p>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start"> <img src="../../assets/teacher.svg" />
-      </ion-avatar>
-      <ion-label>
-        <h3>Orlando Flores</h3>
-        <p>Psicologo</p>
-        <p><b>Necesitas ayuda</b></p>
-      </ion-label>
-      <p>+123456789</p>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start"> <img src="../../assets/teacher.svg" />
-      </ion-avatar>
-      <ion-label>
-        <h3>Elber Gomez T.</h3>
-        <p>Psicologo</p>
-        <p><b>Necesitas ayuda</b></p>
-      </ion-label>
-      <p>+123456789</p>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-avatar slot="start"> <img src="../../assets/teacher.svg" />
+            </ion-avatar>
+            <ion-label>
+              <h3>Yuli Alcalina</h3>
+              <p>Psicologa</p>
+            </ion-label>
+            <p>+123456789</p>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start"> <img src="../../assets/teacher.svg" />
+            </ion-avatar>
+            <ion-label>
+              <h3>Orlando Flores</h3>
+              <p>Psicologo</p>
+            </ion-label>
+            <p>+123456789</p>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start"> <img src="../../assets/teacher.svg" />
+            </ion-avatar>
+            <ion-label>
+              <h3>Elber Gomez T.</h3>
+              <p>Psicologo</p>
+            </ion-label>
+            <p>+123456789</p>
+          </ion-item>
+          <ion-item>
+              <ion-avatar slot="start"> <img src="../../assets/teacher.svg" />
+              </ion-avatar>
+              <ion-label>
+                <h3>Mario Garcia L.</h3>
+                <p>Psicologo</p>
+              </ion-label>
+              <p>+123456789</p>
+            </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-content>
+
+  <ion-content class="ion-content-bottom">
+    <ion-grid>
+    <ion-row>
+      <ion-col text-center aling-items-center class="img-social">
+        <h3>Grupos de apoyo en redes</h3>
+          <a (click)="NetworkSupportFacebook()"><img src="../../assets/facebook.svg" width="100"/></a>
+          <img src="../../assets/instagram.svg" width="100"/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
