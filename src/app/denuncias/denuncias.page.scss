@@ -7,7 +7,7 @@ h3{
 }
 ion-footer{
     background-color: #fff;
-    height: 70px;
+    height: 120px;
     min-height: 70px;
 }
 #button-font{
@@ -16,5 +16,9 @@ ion-footer{
 .btn-call{
     --background: #009959;
     min-height: 50px !important;    
-    height: 60px !important;
+    height: 50px !important;
+}
+.btn-call1{
+    min-height: 50px !important;    
+    height: 50px !important;
 }

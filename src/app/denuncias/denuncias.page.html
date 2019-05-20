@@ -11,7 +11,7 @@
 
 <ion-content>
     <ion-fab vertical="top" horizontal="start">
-    <img src="../../assets/shield.svg" />
+    <a (click)="Panic()"><img src="../../assets/shield.svg" /></a>
     <h1 text-center id="button-font">Boton de panico</h1>
   </ion-fab>
 </ion-content>
@@ -20,5 +20,9 @@
     <h3>LLAMAR AL 123 </h3>
     <ion-icon name="call" slot="start">LLAMAR</ion-icon>
   </ion-button>
+  <ion-button  (click)="TerminarCall()" expand="full" shape="round" color="danger" class="btn-call1">
+      <h3>Terminar Alerta</h3>
+      <ion-icon name="close" slot="start"></ion-icon>
+    </ion-button>
 
 </ion-footer>

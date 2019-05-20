@@ -21,6 +21,14 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { UserService } from './user.service';
 
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { SMS } from '@ionic-native/sms/ngx';
+
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -41,6 +49,10 @@ import { UserService } from './user.service';
     AngularFireDatabase,
     InAppBrowser,
     UserService,
+    Geolocation,
+    EmailComposer,
+    SMS,
+    AndroidPermissions,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
